@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "@/store";
 import theme from "@/theme";
 import AppRoutes from "@/routes/AppRoutes";
-import AppInit from "./components/common/AppInit";
+import AppInit from "./components/common/Appinit";
 
 export default function App() {
   return (
