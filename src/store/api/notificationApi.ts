@@ -19,10 +19,14 @@ export const notificationApi = apiSlice.injectEndpoints({
       query: () => "/dashboard",
       providesTags: ["Dashboard"],
     }),
-    getActivityLogs: builder.query<PaginatedResponse<ActivityLog>, { page?: number; limit?: number }>({
-      query: (params) => ({ url: "/activity-logs", params }),
-      providesTags: ["Activity"],
-    }),
+   getActivityLogs: builder.query<PaginatedResponse<ActivityLog>, void>({
+  query: () => ({ 
+    url: "/activity", 
+    method: "POST",
+    body: {},
+  }),
+  providesTags: ["Activity"],
+}),
   }),
 });
 

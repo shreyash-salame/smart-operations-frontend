@@ -46,10 +46,7 @@ export default function ActivityPage() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(20);
 
-  const { data, isLoading } = useGetActivityLogsQuery({
-    page: page + 1,
-    limit: rowsPerPage,
-  });
+  const { data, isLoading } = useGetActivityLogsQuery();
 
   const logs = data?.data ?? [];
   const total = data?.pagination?.totalResults ?? 0;
